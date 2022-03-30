@@ -5,6 +5,8 @@ services:
     container_name: django
     image: ghcr.io/muratcorlu/django-playground:main
     command: python manage.py runserver 0.0.0.0:8000
+    networks:
+      - publicnet
     deploy:
       replicas: 1
       restart_policy:
