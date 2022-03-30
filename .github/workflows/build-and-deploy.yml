@@ -54,6 +54,8 @@ jobs:
       SWARM_TLSCACERT: ${{ secrets.SWARM_TLSCACERT }}
       SWARM_TLSCERT: ${{ secrets.SWARM_TLSCERT }}
       SWARM_TLSKEY: ${{ secrets.SWARM_TLSKEY }}
+      PROD_HOST: ${{ secrets.PROD_HOST }}
+      DJANGO_SECRET_KEY: ${{ secrets.DJANGO_SECRET_KEY }}
     steps:
       - uses: actions/checkout@v2
       - run: mkdir -p ~/.docker
