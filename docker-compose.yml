@@ -7,6 +7,10 @@ services:
     command: python manage.py runserver 0.0.0.0:8000
     networks:
       - publicnet
+    environment:
+      - PROD=1
+      - DJANGO_SECRET_KEY
+      - PROD_HOST
     deploy:
       replicas: 1
       restart_policy:
